@@ -86,15 +86,15 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // |BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                   |       |       |       |       |       |       |
 // |EXTPWR |       |RGB_BRI|RGB_SAI|RGB_HUI|RGB_EFF|                   |       |       |       |       |       |       |
-// |       |       |RGB_BRD|RGB_SAD|RGB_HUD|       |                   |       |       |       |       |       |       |
-// |       |       |       |       |       |       |RGB_TOG|   |       |       | VOL-  | MUTE  | VOL+  |       |       |
-//                 |       |       |       |       |       |   |       |       | PREV  | PLAY  | NEXT  |
+// |       |       |RGB_BRD|RGB_SAD|RGB_HUD|       |                   |       | VOL-  | MUTE  | VOL+  |       |       |
+// |       |       |       |       |       |       |RGB_TOG|   |       |       | PREV  | PLAY  | NEXT  |       |       |
+//                 |       |       |       |       |       |   |       |       |       |       |       |
             bindings = <
-&bt BT_CLR                      &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none        &none      &none        &none &none
-&ext_power EXT_POWER_TOGGLE_CMD &none        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF                         &none &none        &none      &none        &none &none
-&none                           &none        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &none                                   &none &none        &none      &none        &none &none
-&none                           &none        &none           &none           &none           &none           &rgb_ug RGB_TOG   &none &none &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none &none
-                                             &none           &none           &none           &none           &none             &none &none &kp C_PREV   &kp C_PP   &kp C_NEXT
+&bt BT_CLR        &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none        &none      &none        &none &none
+&ext_power EP_TOG &none        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF                         &none &none        &none      &none        &none &none
+&none             &none        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &none                                   &none &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none &none
+&none             &none        &none           &none           &none           &none           &rgb_ug RGB_TOG   &none &none &kp C_PREV   &kp C_PP   &kp C_NEXT   &none &none
+                               &none           &none           &none           &none           &none             &none &none &none        &none      &none
             >;
         };
     };
